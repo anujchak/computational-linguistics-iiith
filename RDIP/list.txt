@@ -1,0 +1,9 @@
+1.drop down list
+2.buttons
+3.Button visibilty
+3.functionality to check (semantically and syntactically.)
+if structure is ok 
+     return true
+else
+ false
+[CORRECT STATEMENT TO BE PRINTER IF THE ANS IS WWRONG]
