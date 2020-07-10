@@ -1,6 +1,83 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+
+  color: black;
+ text-align: center;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.pageElement{text-align:center;}
+
+.dropdown {
+
+  text-align: center;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  text-align: center;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+ text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+</head>
 <body>
+<div class="pageElement">
+
+  <button onclick="myFunction()" class="dropbtn">Select Language</button>
+  <div id="myDropdown" class="dropdown-content">
+    <button type="button"onclick="emni()">english</button><br></br>
+    <button type="button"onclick="emni()">hindi</button>
+  </div>
+</div>
+
+<p id="demo"></p>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+function emni() {
+document.getElementById("demo").innerHTML ="Form a sentence(Declarative or Interrogative or any other type)from the given words."
+}
+</script>
 input a sentence: <input type="text" id="name3" required></br></br>
 <button type="button"onclick="cal()">validate your answer</button>
 <script>
