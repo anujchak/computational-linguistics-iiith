@@ -3,6 +3,38 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+div.b {
+  text-align: left;
+   color: black;
+   font-size: 150%;
+}
+div.a {
+  text-align: center;
+  color: blue;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; 
+}
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {background: #eee;}
+
+.success {color: green;}
+.info {color: dodgerblue;}
+.warning {color: orange;}
+.danger {color: red;}
+.default {color: black;}
+
 .dropbtn {
 
   color: black;
@@ -43,46 +75,33 @@
 .show {display: block;}
 </style>
 </head>
+<div class="b"><p>Experiment</p></div>
 <body>
 <div class="pageElement">
 
   <button onclick="myFunction()" class="dropbtn">Select Language</button>
   <div id="myDropdown" class="dropdown-content">
     <button type="button"onclick="emni()">english</button><br></br>
-    <button type="button"onclick="emni()">hindi</button>
+    <button type="button"onclick="emni1()">hindi</button>
   </div>
 </div>
-
-<p id="demo"></p>
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-function emni() {
-document.getElementById("demo").innerHTML ="Form a sentence(Declarative or Interrogative or any other type)from the given words."
-}
-</script>
-input a sentence: <input type="text" id="name3" required></br></br>
+<div class="a"><h3 id="demo"></h3></div>
+<div class="center">
+<button class="btn success"><p id="0"></p></button>
+<button class="btn success"><p id="1"></p></button>
+<button class="btn success"><p id="2"></p></button>
+<button class="btn success"><p id="3"></p></button>
+<button class="btn success"><p id="4"></p></button>
+<button class="btn success"><p id="5"></p></button>
+<button class="btn success"><p id="6"></p></button>
+<button class="btn success"><p id="7"></p></button>
+<button class="btn success"><p id="8"></p></button><br></br>
+</div>
+input a sentence: <input type="text" id="name3" required>
 <button type="button"onclick="cal()">validate your answer</button>
 <script>
-function cal(){
 var a=[]
+var ah=[]
 a[0]="John ate an apple before afternoon"
 a[1]="before afternoon John ate an apple"
 a[2]="John before afternoon ate an apple"
@@ -117,52 +136,107 @@ a[30]="yesterday I told her that I bought a book"
 a[31]="I bought a book that I told her yesterday"
 a[32]="I bought a book yesterday that I told her"
 a[33]="yesterday I bought a book that I told her"
-a[34]="राम और श्याम बाजार गयें"
-a[35]="राम और श्याम गयें बाजार"
-a[36]="बाजार गयें राम और श्याम"
-a[37]="गयें बाजार राम और श्याम"
-a[38]="राम सोया और श्याम भी"
-a[39]="श्याम सोया और राम भी"
-a[40]="सोया श्याम और राम भी"
-a[41]="सोया राम और श्याम भी"
-a[42]="मैंने उसे बताया कि राम सो रहा है"
-a[43]="मैंने उसे बताया कि सो रहा है राम"
-a[44]="उसे मैंने बताया कि राम सो रहा है"
-a[45]="उसे मैंने बताया कि सो रहा है राम"
-a[46]="मैंने बताया उसे कि राम सो रहा है"
-a[47]="मैंने बताया उसे कि सो रहा है राम"
-a[48]="उसे बताया मैंने कि राम सो रहा है"
-a[49]="उसे बताया मैंने कि सो रहा है राम"
-a[50]="बताया मैंने उसे कि राम सो रहा है"
-a[51]="बताया मैंने उसे कि सो रहा है राम"
-a[52]="बताया उसे मैंने कि राम सो रहा है"
-a[53]="बताया उसे मैंने कि सो रहा है राम"
-a[54]="राम खाकर सोया"
-a[55]="खाकर राम सोया"
-a[56]="राम सोया खाकर"
-a[57]="खाकर सोया राम"
-a[58]="सोया राम खाकर"
-a[59]="सोया खाकर राम"
-a[60]="बिल्लियों को मारकर कुत्ता सो गया"
-a[61]="मारकर बिल्लियों को कुत्ता सो गया"	
-a[62]="बिल्लियों को मारकर सो गया कुत्ता"
-a[63]="मारकर बिल्लियों को सो गया कुत्ता"
-a[64]="कुत्ता सो गया बिल्लियों को मारकर"
-a[65]="कुत्ता सो गया मारकर बिल्लियों को"
-a[66]="सो गया कुत्ता बिल्लियों को मारकर"
-a[67]="सो गया कुत्ता मारकर बिल्लियों को"
-a[68]="एक लाल किताब वहाँ है"
-a[69]="एक लाल किताब है वहाँ"
-a[70]="वहाँ है एक लाल किताब"
-a[71]="है वहाँ एक लाल किताब"
-a[72]="एक बड़ी सी किताब वहाँ है"
-a[73]="एक बड़ी सी किताब है वहाँ"
-a[74]="बड़ी सी एक किताब वहाँ है"
-a[75]="बड़ी सी एक किताब है वहाँ"
-a[76]="वहाँ है एक बड़ी सी किताब"
-a[77]="वहाँ है बड़ी सी एक किताब"
-a[78]="है वहाँ एक बड़ी सी किताब"
-a[79]="है वहाँ बड़ी सी एक किताब"
+
+ah[0]="राम और श्याम बाजार गयें"
+ah[1]="राम और श्याम गयें बाजार"
+ah[2]="बाजार गयें राम और श्याम"
+ah[3]="गयें बाजार राम और श्याम"
+ah[4]="राम सोया और श्याम भी"
+ah[5]="श्याम सोया और राम भी"
+ah[6]="सोया श्याम और राम भी"
+ah[7]="सोया राम और श्याम भी"
+ah[8]="मैंने उसे बताया कि राम सो रहा है"
+ah[9]="मैंने उसे बताया कि सो रहा है राम"
+ah[10]="उसे मैंने बताया कि राम सो रहा है"
+ah[11]="उसे मैंने बताया कि सो रहा है राम"
+ah[12]="मैंने बताया उसे कि राम सो रहा है"
+ah[13]="मैंने बताया उसे कि सो रहा है राम"
+ah[14]="उसे बताया मैंने कि राम सो रहा है"
+ah[15]="उसे बताया मैंने कि सो रहा है राम"
+ah[16]="बताया मैंने उसे कि राम सो रहा है"
+ah[17]="बताया मैंने उसे कि सो रहा है राम"
+ah[18]="बताया उसे मैंने कि राम सो रहा है"
+ah[19]="बताया उसे मैंने कि सो रहा है राम"
+ah[20]="राम खाकर सोया"
+ah[21]="खाकर राम सोया"
+ah[22]="राम सोया खाकर"
+ah[23]="खाकर सोया राम"
+ah[24]="सोया राम खाकर"
+ah[25]="सोया खाकर राम"
+ah[26]="बिल्लियों को मारकर कुत्ता सो गया"
+ah[27]="मारकर बिल्लियों को कुत्ता सो गया"	
+ah[28]="बिल्लियों को मारकर सो गया कुत्ता"
+ah[29]="मारकर बिल्लियों को सो गया कुत्ता"
+ah[30]="कुत्ता सो गया बिल्लियों को मारकर"
+ah[31]="कुत्ता सो गया मारकर बिल्लियों को"
+ah[32]="सो गया कुत्ता बिल्लियों को मारकर"
+ah[33]="सो गया कुत्ता मारकर बिल्लियों को"
+ah[34]="एक लाल किताब वहाँ है"
+ah[35]="एक लाल किताब है वहाँ"
+ah[36]="वहाँ है एक लाल किताब"
+ah[37]="है वहाँ एक लाल किताब"
+ah[38]="एक बड़ी सी किताब वहाँ है"
+ah[39]="एक बड़ी सी किताब है वहाँ"
+ah[40]="बड़ी सी एक किताब वहाँ है"
+ah[41]="बड़ी सी एक किताब है वहाँ"
+ah[42]="वहाँ है एक बड़ी सी किताब"
+ah[43]="वहाँ है बड़ी सी एक किताब"
+ah[44]="है वहाँ एक बड़ी सी किताब"
+ah[45]="है वहाँ बड़ी सी एक किताब"
+function shuffleArray ( array ) {
+    var counter = array.length, temp, index;
+    // While there are elements in the array
+    while ( counter > 0 ) {
+        // Pick a random index
+        index = Math.floor( Math.random() * counter );
+
+        // Decrease counter by 1
+        counter--;
+
+        // And swap the last element with it
+        temp = array[ counter ];
+        array[ counter ] = array[ index ];
+        array[ index ] = temp;
+    }
+    return array;
+}
+function emni() {
+document.getElementById("demo").innerHTML ="Form a sentence(Declarative or Interrogative or any other type)from the given words.<br>(select the buttons in proper order)"
+var c1 = Math.floor((Math.random() *33) + 1);
+var str = a[c1]
+var a1= str.split(" ")
+var l1=a1.length
+a1= shuffleArray (a1)
+for(var i=0;i<l1;i++)
+{
+  if(i<l1){
+  document.getElementById(i).innerHTML =a1[i] ;
+  }
+  else {
+       
+  document.getElementById(i).innerHTML = "XXXXXX";
+  }
+}
+}
+function emni1() {
+document.getElementById("demo").innerHTML ="Form a sentence(Declarative or Interrogative or any other type)from the given words.<br>(select the buttons in proper order)"
+var c1 = Math.floor((Math.random() *45) + 1);
+var str = ah[c1]
+var a1= str.split(" ")
+var l1=a1.length
+a1= shuffleArray (a1)
+for(var i=0;i<9;i++)
+{ if(i<l1){
+  document.getElementById(i).innerHTML =a1[i] ;
+  }
+  else {
+       
+  document.getElementById(i).innerHTML = "XXXXXX";
+  }
+}
+}
+
+function cal(){
 var x = document.getElementById("name3").value;
 var f=0,i;
 for(i=0;i<=79;i++)
@@ -174,11 +248,31 @@ for(i=0;i<=79;i++)
   }
 }
 if(f==1)
-{ document.write("right ans")
+{ 
+    document.write("rigt ans")
 }
 else{
   document.write("wrong ans")
+} 
 }
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }
 </script>
 </body>
