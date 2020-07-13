@@ -85,23 +85,76 @@ div.a {
     <button type="button"onclick="emni1()">hindi</button>
   </div>
 </div>
-<div class="a"><h3 id="demo"></h3></div>
+<div class="a"><h3 id="demo"></h3></div><br></br>
 <div class="center">
-<button class="btn success"><p id="0"></p></button>
-<button class="btn success"><p id="1"></p></button>
-<button class="btn success"><p id="2"></p></button>
-<button class="btn success"><p id="3"></p></button>
-<button class="btn success"><p id="4"></p></button>
-<button class="btn success"><p id="5"></p></button>
-<button class="btn success"><p id="6"></p></button>
-<button class="btn success"><p id="7"></p></button>
-<button class="btn success"><p id="8"></p></button><br></br>
+<button class="btn success" id="11" onclick="con(0)"style=display:none><p id="0"></p></button>
+<button class="btn success" id="12" onclick="con(1)"style=display:none><p id="1"></p></button>
+<button class="btn success" id="13" onclick="con(2)"style=display:none><p id="2"></p></button>
+<button class="btn success" id="14" onclick="con(3)"style=display:none><p id="3"></p></button>
+<button class="btn success" id="15" onclick="con(4)"style=display:none><p id="4"></p></button>
+<button class="btn success" id="16" onclick="con(5)"style=display:none><p id="5"></p></button>
+<button class="btn success" id="17" onclick="con(6)"style=display:none><p id="6"></p></button>
+<button class="btn success" id="18" onclick="con(7)"style=display:none><p id="7"></p></button>
+<button class="btn success" id="19" onclick="con(8)"style=display:none><p id="8"></p></button><br></br>
+
 </div>
-input a sentence: <input type="text" id="name3" required>
+
+<p3 id="result"></p3><br></br>
+<button class="btn success" id="20" style=display:none>reform sentences</button><br></br>
 <button type="button"onclick="cal()">validate your answer</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+$(document).ready(function(){
+  $("#11").click(function(){
+    $("#11").hide();
+    $("#20").show();
+  });
+  $("#12").click(function(){
+    $("#12").hide();
+     $("#20").show();
+  });
+$("#13").click(function(){
+    $("#13").hide();
+    $("#20").show();
+  });
+$("#14").click(function(){
+    $("#14").hide();
+    $("#20").show();
+  });
+$("#15").click(function(){
+    $("#15").hide();
+    $("#20").show();
+  });
+$("#16").click(function(){
+    $("#16").hide();
+    $("#20").show();
+  });
+$("#17").click(function(){
+    $("#17").hide();
+    $("#20").show();
+  });
+$("#18").click(function(){
+    $("#18").hide();
+    $("#20").show();
+  });
+$("#19").click(function(){
+    $("#19").hide();
+    $("#20").show();
+  });
+$(function btnshow(){
+    $("#b1").show();
+  });
+});
+</script>
+<script>
+
+
 var a=[]
 var ah=[]
+var af=[]
+var s=""
+var e=0
+var h=0
 a[0]="John ate an apple before afternoon"
 a[1]="before afternoon John ate an apple"
 a[2]="John before afternoon ate an apple"
@@ -183,6 +236,7 @@ ah[42]="वहाँ है एक बड़ी सी किताब"
 ah[43]="वहाँ है बड़ी सी एक किताब"
 ah[44]="है वहाँ एक बड़ी सी किताब"
 ah[45]="है वहाँ बड़ी सी एक किताब"
+
 function shuffleArray ( array ) {
     var counter = array.length, temp, index;
     // While there are elements in the array
@@ -201,12 +255,27 @@ function shuffleArray ( array ) {
     return array;
 }
 function emni() {
+
+e=1
+h=0
 document.getElementById("demo").innerHTML ="Form a sentence(Declarative or Interrogative or any other type)from the given words.<br>(select the buttons in proper order)"
 var c1 = Math.floor((Math.random() *33) + 1);
 var str = a[c1]
 var a1= str.split(" ")
 var l1=a1.length
 a1= shuffleArray (a1)
+af=a1
+s=""
+document.getElementById("result").innerHTML =s
+for(var i=11;i<20;i++)
+    { var t = "#"+i
+    $(t).hide();
+    }
+for(var i=11;i<l1+11;i++)
+    { var t = "#"+i
+    $(t).show();
+    }
+$("#20").hide();
 for(var i=0;i<l1;i++)
 {
   if(i<l1){
@@ -219,12 +288,26 @@ for(var i=0;i<l1;i++)
 }
 }
 function emni1() {
+e=0
+h=1
 document.getElementById("demo").innerHTML ="Form a sentence(Declarative or Interrogative or any other type)from the given words.<br>(select the buttons in proper order)"
 var c1 = Math.floor((Math.random() *45) + 1);
 var str = ah[c1]
 var a1= str.split(" ")
 var l1=a1.length
 a1= shuffleArray (a1)
+af=a1
+s=""
+document.getElementById("result").innerHTML =s
+for(var i=11;i<20;i++)
+    { var t = "#"+i
+    $(t).hide();
+    }
+for(var i=11;i<l1+11;i++)
+    { var t = "#"+i
+    $(t).show();
+    }
+$("#20").hide();
 for(var i=0;i<9;i++)
 { if(i<l1){
   document.getElementById(i).innerHTML =a1[i] ;
@@ -235,11 +318,19 @@ for(var i=0;i<9;i++)
   }
 }
 }
+function con(x){
+   var t = af[x] 
+   s=s+t
+   document.getElementById("result").innerHTML =s
+   s=s+" " 
+}
+
 
 function cal(){
-var x = document.getElementById("name3").value;
+var x = s.trim()
 var f=0,i;
-for(i=0;i<=79;i++)
+if(e==1){
+for(i=0;i<=33;i++)
 {
   if (x==a[i])
   {
@@ -253,15 +344,29 @@ if(f==1)
 }
 else{
   document.write("wrong ans")
+}
+}
+if(h==1){
+for(i=0;i<=45;i++)
+{
+  if (x==ah[i])
+  {
+    f=1
+    break
+  }
+}
+if(f==1)
+{ 
+    document.write("rigt ans")
+}
+else{
+  document.write("wrong ans")
+}
 } 
 }
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
-
-// Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
