@@ -126,7 +126,7 @@ div.a {
 <div class="center1">
 <button class="btn success" id="20" style=display:none onclick="re()">reform sentences</button><br></br>
 </div>
-<div class="v"><button type="button"onclick="cal()">Check trhe correctness of this sentence</button>
+<div class="v"><button type="button"onclick="cal()" style=display:none id="ans">Check trhe correctness of this sentence</button>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -178,6 +178,7 @@ $("#19").click(function(){
 $("#20").click(function(){
     $("#20").hide();
      $("#line").hide();
+     $("#ans").hide();
   });
 $(function btnshow(){
     $("#b1").show();
@@ -323,6 +324,7 @@ for(var i=11;i<l1+11;i++)
     }
 $("#20").hide();
  $("#line").hide();
+$("#ans").hide();
 for(var i=0;i<l1;i++)
 {
   if(i<l1){
@@ -356,6 +358,7 @@ for(var i=11;i<l1+11;i++)
     }
 $("#20").hide();
  $("#line").hide();
+$("#ans").hide();
 for(var i=0;i<9;i++)
 { if(i<l1){
   document.getElementById(i).innerHTML =a1[i] ;
@@ -367,10 +370,18 @@ for(var i=0;i<9;i++)
 }
 }
 function con(x){
+   var l
    var t = af[x] 
    s=s+t
    document.getElementById("result").innerHTML =s
-   s=s+" " 
+   l=s.split(" ")
+  var l1 = l.length
+  var l2 = af.length
+   s=s+" "
+  if(l1==l2)
+{
+   $("#ans").show();
+} 
 }
 
 
