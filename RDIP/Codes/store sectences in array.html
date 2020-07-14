@@ -3,7 +3,57 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-
+div.part {
+  text-align: center;
+  color: blue;
+}
+div.part1 {
+  text-align: center;
+  color: blue;
+}
+div.part2 {
+  text-align: center;
+  color: blue;
+}
+div.part3 {
+  text-align: center;
+  color: blue;
+}
+div.part4 {
+  text-align: center;
+  color: blue;
+}
+div.part5 {
+  text-align: center;
+  color: blue;
+}
+div.part6 {
+  text-align: center;
+  color: blue;
+}
+div.part7 {
+  text-align: center;
+  color: blue;
+}
+div.correct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.right {
+   display: flex;
+  justify-content: center;
+   align-items: center;
+   color: green;
+   font-size: 150%;
+}
+div.wrong {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+   color: red;
+   font-size: 150%;
+}
 div.y {
   text-align: center;
   color: blue;
@@ -118,15 +168,34 @@ div.a {
 <button class="btn success" id="16" onclick="con(5)"style=display:none><p id="5"></p></button>
 <button class="btn success" id="17" onclick="con(6)"style=display:none><p id="6"></p></button>
 <button class="btn success" id="18" onclick="con(7)"style=display:none><p id="7"></p></button>
-<button class="btn success" id="19" onclick="con(8)"style=display:none><p id="8"></p></button><br></br>
+<button class="btn success" id="19" onclick="con(8)"style=display:none><p id="8"></p></button>
 
 </div>
 <div class="y" style=display:none id="line" ><h4>Formed Sentence (after selecting words):</h4></br></br></div>
-<div class="z"><h5 id="result"></h5><br></br></div>
+<div class="z"><h5 id="result"></h5></div>
 <div class="center1">
-<button class="btn success" id="20" style=display:none onclick="re()">reform sentences</button><br></br>
+<button class="btn success" id="20" style=display:none onclick="re()">reform sentences</button>
 </div>
-<div class="v"><button type="button"onclick="cal()" style=display:none id="ans">Check trhe correctness of this sentence</button>
+<div class="v"><button type="button"onclick="cal()" style=display:none id="ans">Check trhe correctness of this sentence</button><br></br></div>
+
+<div class="right"><h6 style=display:none id="right">RIGHT ANSWER!!!</h6><br></br></div></br>
+<div class="wrong"><h7  style=display:none id="wrong">WRONG ANSWER!!!</h7><br></br></div>
+
+<div class="correct"><button type="Show correct answer">Show correct answer</button></div>
+
+<div class="part" style=display:none><p>demo</p></div>
+<div class="part1" style=display:none><p>demo</p></div>
+
+<div class="part2" style=display:none><p>demo</p></div>
+<div class="part3"style=display:none><p>demo</p></div>
+
+<div class="part4"style=display:none><p>demo</p></div>
+<div class="part5"style=display:none><p>demo</p></div>
+
+<div class="part6"style=display:none><p>demo</p></div>
+<div class="part7"style=display:none><p>demo</p></div>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -399,10 +468,10 @@ for(i=0;i<=33;i++)
 }
 if(f==1)
 { 
-    document.write("rigt ans")
+     $("#right").show();
 }
 else{
-  document.write("wrong ans")
+   $("#wrong").show();
 }
 }
 if(h==1){
@@ -416,10 +485,11 @@ for(i=0;i<=45;i++)
 }
 if(f==1)
 { 
-    document.write("rigt ans")
+    
+     $("#right").show();
 }
 else{
-  document.write("wrong ans")
+  $("#wrong").show();
 }
 } 
 }
