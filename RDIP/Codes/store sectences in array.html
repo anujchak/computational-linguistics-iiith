@@ -3,6 +3,23 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+div.y {
+  text-align: center;
+  color: blue;
+}
+div.z {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+   color: black;
+   font-size: 150%;
+}
+div.v {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 div.b {
   text-align: left;
    color: black;
@@ -13,6 +30,12 @@ div.a {
   color: blue;
 }
 .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; 
+}
+.center1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,48 +121,63 @@ div.a {
 <button class="btn success" id="19" onclick="con(8)"style=display:none><p id="8"></p></button><br></br>
 
 </div>
-
-<p3 id="result"></p3><br></br>
-<button class="btn success" id="20" style=display:none>reform sentences</button><br></br>
-<button type="button"onclick="cal()">validate your answer</button>
+<div class="y" style=display:none id="line" ><h4>Formed Sentence (after selecting words):</h4></br></br></div>
+<div class="z"><h5 id="result"></h5><br></br></div>
+<div class="center1">
+<button class="btn success" id="20" style=display:none onclick="re()">reform sentences</button><br></br>
+</div>
+<div class="v"><button type="button"onclick="cal()">Check trhe correctness of this sentence</button>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
   $("#11").click(function(){
     $("#11").hide();
     $("#20").show();
+    $("#line").show();
   });
   $("#12").click(function(){
     $("#12").hide();
      $("#20").show();
+     $("#line").show();
   });
 $("#13").click(function(){
     $("#13").hide();
     $("#20").show();
+     $("#line").show();
   });
 $("#14").click(function(){
     $("#14").hide();
     $("#20").show();
+     $("#line").show();
   });
 $("#15").click(function(){
     $("#15").hide();
     $("#20").show();
+    $("#line").show();
   });
 $("#16").click(function(){
     $("#16").hide();
     $("#20").show();
+     $("#line").show();
   });
 $("#17").click(function(){
     $("#17").hide();
     $("#20").show();
+     $("#line").show();
   });
 $("#18").click(function(){
     $("#18").hide();
     $("#20").show();
+    $("#line").show();
   });
 $("#19").click(function(){
     $("#19").hide();
     $("#20").show();
+    $("#line").show();
+  });
+$("#20").click(function(){
+    $("#20").hide();
+     $("#line").hide();
   });
 $(function btnshow(){
     $("#b1").show();
@@ -236,7 +274,15 @@ ah[42]="वहाँ है एक बड़ी सी किताब"
 ah[43]="वहाँ है बड़ी सी एक किताब"
 ah[44]="है वहाँ एक बड़ी सी किताब"
 ah[45]="है वहाँ बड़ी सी एक किताब"
-
+function re() {
+  s=""
+document.getElementById("result").innerHTML =s
+var l2 = af.length
+ for(var i=11;i<l2+11;i++)
+    { var t = "#"+i
+    $(t).show();
+    } 
+}
 function shuffleArray ( array ) {
     var counter = array.length, temp, index;
     // While there are elements in the array
@@ -276,6 +322,7 @@ for(var i=11;i<l1+11;i++)
     $(t).show();
     }
 $("#20").hide();
+ $("#line").hide();
 for(var i=0;i<l1;i++)
 {
   if(i<l1){
@@ -308,6 +355,7 @@ for(var i=11;i<l1+11;i++)
     $(t).show();
     }
 $("#20").hide();
+ $("#line").hide();
 for(var i=0;i<9;i++)
 { if(i<l1){
   document.getElementById(i).innerHTML =a1[i] ;
