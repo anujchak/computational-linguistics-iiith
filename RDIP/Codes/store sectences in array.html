@@ -181,20 +181,32 @@ div.a {
 <div class="right"><h6 style=display:none id="right">RIGHT ANSWER!!!</h6><br></br></div></br>
 <div class="wrong"><h7  style=display:none id="wrong">WRONG ANSWER!!!</h7><br></br></div>
 
-<div class="correct"><button type="Show correct answer" id ="correct" style=display:none>Show correct answer</button></div>
+<div class="correct"><button type="Show correct answer" id ="correct" style=display:none onclick="emni3()"><p id="300"></p></button></div>
 
-<div class="part" style=display:none><p>demo</p></div>
-<div class="part1" style=display:none><p>demo</p></div>
+<div class="part" id="400"><p></p></div>
+<div class="part1" id="401"><p></p></div>
 
-<div class="part2" style=display:none><p>demo</p></div>
-<div class="part3"style=display:none><p>demo</p></div>
+<div class="part2"  id="402"><p></p></div>
+<div class="part3" id="403"><p></p></div>
 
-<div class="part4"style=display:none><p>demo</p></div>
-<div class="part5"style=display:none><p>demo</p></div>
+<div class="part4" id="404"><p></p></div>
+<div class="part5" id="405"><p></p></div>
 
-<div class="part6"style=display:none><p>demo</p></div>
-<div class="part7"style=display:none><p>demo</p></div>
+<div class="part6" id="406"><p></p></div>
+<div class="part7" id="407"><p></p></div>
 
+
+<div class="par8" id="408"><p></p></div>
+<div class="part9" id="409"><p></p></div>
+
+<div class="part10"  id="410"><p></p></div>
+<div class="part11" id="411"><p></p></div>
+
+<div class="part12" id="412"><p></p></div>
+<div class="part13" id="413"><p></p></div>
+
+<div class="part14" id="414"><p></p></div>
+<div class="part15" id="415"><p></p></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
@@ -266,6 +278,9 @@ var af=[]
 var s=""
 var e=0
 var h=0
+var hide1
+var show1
+var f3 =0
 a[0]="John ate an apple before afternoon"
 a[1]="before afternoon John ate an apple"
 a[2]="John before afternoon ate an apple"
@@ -347,6 +362,181 @@ ah[42]="वहाँ है एक बड़ी सी किताब"
 ah[43]="वहाँ है बड़ी सी एक किताब"
 ah[44]="है वहाँ एक बड़ी सी किताब"
 ah[45]="है वहाँ बड़ी सी एक किताब"
+function emni3() {
+   if(show1==1)
+{
+   document.getElementById("300").innerHTML ="Hide answers" ;
+   hide1=1
+   show1=0
+if(e==1)
+{
+    if(f3==0 || f3==1 || f3==2){
+       var tem=0
+       for(var i=400;i<403;i++)
+    { var t = i
+    document.getElementById(t).innerHTML =a[tem] ;
+          tem=tem+1
+    } 
+    }
+    if(f3==3 || f3==4){
+       var tem=3
+       for(var i=400;i<402;i++)
+    { var t = i
+    document.getElementById(t).innerHTML =a[tem] ;
+          tem=tem+1
+    } 
+    }
+     if(f3==5 || f3==6){
+       var tem=5
+       for(var i=400;i<402;i++)
+    { var t = i
+    document.getElementById(t).innerHTML = a[tem] ;
+          tem=tem+1
+       
+    } 
+    }
+    if(f3==7 || f3==8 || f3==9){
+       var tem=7
+       for(var i=400;i<403;i++)
+    { var t = i
+    document.getElementById(t).innerHTML =a[tem] ;
+          tem=tem+1
+    } 
+    }
+if(f3==10 || f3==11){
+       var tem=10
+       for(var i=400;i<402;i++)
+    { var t =i
+    document.getElementById(t).innerHTML =a[tem] ;
+          tem=tem+1
+    } 
+    }
+if(f3==12 || f3==15 || f3==13 || f3==14 ){
+       var tem=12
+       for(var i=400;i<405;i++)
+    { var t = i
+    document.getElementById(t).innerHTML =a[tem] ;
+          tem=tem+1
+    } 
+    }
+if(f3==16 || f3==17){
+       var tem=16
+       for(var i=400;i<402;i++)
+    { var t = i
+    document.getElementById(t).innerHTML =a[tem] ;
+          tem=tem+1
+    } 
+    }
+if(f3==18 || f3==19){
+       var tem=18
+       for(var i=400;i<402;i++)
+    { var t =i
+    document.getElementById(t).innerHTML =a[tem] ;
+          tem=tem+1
+    } 
+    }
+if(f3==20 || f3==21 || f3==22|| f3==23 || f3==24 || f3==25 || f3==26 || f3==27){
+       var tem=20
+       for(var i=400;i<408;i++)
+    { var t = i
+    document.getElementById(t).innerHTML =a[tem] ;
+          tem=tem+1
+    } 
+    }
+if(f3==28 || f3==29 || f3==30 || f3==31 || f3==32|| f3==33){
+       var tem=28
+       for(var i=400;i<406;i++)
+    { var t = i
+    document.getElementById(t).innerHTML =a[tem] ;
+          tem=tem+1
+    } 
+    }
+
+}
+
+
+if(h==1)
+{
+    if(f3==0 || f3==1 || f3==2 || f3==3){
+       var tem=0
+       for(var i=400;i<404;i++)
+    { var t = i
+    document.getElementById(t).innerHTML =ah[tem] ;
+          tem=tem+1
+    } 
+    }
+ if(f3==4 || f3==5 || f3==6 || f3==7){
+       var tem=4
+       for(var i=400;i<404;i++)
+    { var t = i
+    document.getElementById(t).innerHTML =ah[tem] ;
+          tem=tem+1
+    } 
+    }
+ if(f3==8 || f3==9 ){
+       var tem=8
+       for(var i=400;i<402;i++)
+    { var t = i
+    document.getElementById(t).innerHTML =ah[tem] ;
+          tem=tem+1
+    } 
+    }
+ if(f3==10 || f3==11 || f3==12 || f3==13 || f3==14 || f3==15 || f3==16 || f3==17 || f3==18 || f3==19){
+       var tem=10
+       for(var i=400;i<410;i++)
+    { var t = i
+    document.getElementById(t).innerHTML =ah[tem] ;
+          tem=tem+1
+    } 
+    }
+ if(f3==20 || f3==21 || f3==22 || f3==23 || f3==24 || f3==25){
+       var tem=20
+       for(var i=400;i<406;i++)
+    { var t = i
+    document.getElementById(t).innerHTML =ah[tem] ;
+          tem=tem+1
+    } 
+    }
+ if(f3==26 || f3==27 || f3==28 || f3==29 || f3==30 || f3==31 || f3==32 || f3==33){
+       var tem=26
+       for(var i=400;i<408;i++)
+    { var t = i
+    document.getElementById(t).innerHTML =ah[tem] ;
+          tem=tem+1
+    } 
+    }
+ if(f3==34 || f3==35 || f3==36 || f3==37){
+       var tem=34
+       for(var i=400;i<404;i++)
+    { var t = i
+    document.getElementById(t).innerHTML =ah[tem] ;
+          tem=tem+1
+    } 
+    }
+if(f3==38 || f3==39 || f3==40 || f3==41 || f3==42 || f3==43 || f3==44 || f3==45){
+       var tem=38
+       for(var i=400;i<408;i++)
+    { var t = i
+    document.getElementById(t).innerHTML =ah[tem] ;
+          tem=tem+1
+    } 
+    }   
+}
+}
+
+else {
+   if(hide1==1)
+{
+   document.getElementById("300").innerHTML ="Show answers" ;
+   hide1=0
+   show1=1
+   for(var i=400;i<408;i++)
+   {
+          document.getElementById(i).innerHTML ="" ;
+   }
+}
+}
+}
 function re() {
   s=""
 document.getElementById("result").innerHTML =s
@@ -379,6 +569,7 @@ e=1
 h=0
 document.getElementById("demo").innerHTML ="Form a sentence(Declarative or Interrogative or any other type)from the given words.<br>(select the buttons in proper order)"
 var c1 = Math.floor((Math.random() *33) + 1);
+f3= c1
 var str = a[c1]
 var a1= str.split(" ")
 var l1=a1.length
@@ -416,6 +607,7 @@ e=0
 h=1
 document.getElementById("demo").innerHTML ="Form a sentence(Declarative or Interrogative or any other type)from the given words.<br>(select the buttons in proper order)"
 var c1 = Math.floor((Math.random() *45) + 1);
+f3=c1
 var str = ah[c1]
 var a1= str.split(" ")
 var l1=a1.length
@@ -482,6 +674,9 @@ if(f==1)
 else{
    $("#wrong").show();
   $("#correct").show();
+  document.getElementById("300").innerHTML ="show correct answers" ;
+   show1=1
+   hide1=0
 }
 }
 if(h==1){
@@ -501,6 +696,10 @@ if(f==1)
 else{
   $("#wrong").show();
   $("#correct").show();
+
+  document.getElementById("300").innerHTML ="show correct answers" ;
+  show1=1
+   hide1=0
 }
 } 
 }
