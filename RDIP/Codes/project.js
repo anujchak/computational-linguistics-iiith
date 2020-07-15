@@ -1,283 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-div.part {
-  text-align: center;
-  color: blue;
-}
-div.part1 {
-  text-align: center;
-  color: blue;
-}
-div.part2 {
-  text-align: center;
-  color: blue;
-}
-div.part3 {
-  text-align: center;
-  color: blue;
-}
-div.part4 {
-  text-align: center;
-  color: blue;
-}
-div.part5 {
-  text-align: center;
-  color: blue;
-}
-div.part6 {
-  text-align: center;
-  color: blue;
-}
-div.part7 {
-  text-align: center;
-  color: blue;
-}
-div.correct {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-div.right {
-   display: flex;
-  justify-content: center;
-   align-items: center;
-   color: green;
-   font-size: 150%;
-}
-div.wrong {
-    display: flex;
-  justify-content: center;
-  align-items: center;
-   color: red;
-   font-size: 150%;
-}
-div.y {
-  text-align: center;
-  color: blue;
-}
-div.z {
-    display: flex;
-  justify-content: center;
-  align-items: center;
-   color: black;
-   font-size: 150%;
-}
-div.v {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-div.b {
-  text-align: left;
-   color: black;
-   font-size: 150%;
-}
-div.a {
-  text-align: center;
-  color: blue;
-}
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px; 
-}
-.center1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px; 
-}
-.btn {
-  border: none;
-  background-color: inherit;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-  display: inline-block;
-}
-
-.btn:hover {background: #eee;}
-
-.success {color: green;}
-.info {color: dodgerblue;}
-.warning {color: orange;}
-.danger {color: red;}
-.default {color: black;}
-
-.dropbtn {
-
-  color: black;
- text-align: center;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-.pageElement{text-align:center;}
-
-.dropdown {
-
-  text-align: center;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  text-align: center;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
- text-align: center;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-</style>
-</head>
-<div class="b"><p>Experiment</p></div>
-<body>
-<div class="pageElement">
-
-  <button onclick="myFunction()" class="dropbtn">Select Language</button>
-  <div id="myDropdown" class="dropdown-content">
-    <button type="button"onclick="emni()">english</button><br></br>
-    <button type="button"onclick="emni1()">hindi</button>
-  </div>
-</div>
-<div class="a"><h3 id="demo"></h3></div><br></br>
-<div class="center">
-<button class="btn success" id="11" onclick="con(0)"style=display:none><p id="0"></p></button>
-<button class="btn success" id="12" onclick="con(1)"style=display:none><p id="1"></p></button>
-<button class="btn success" id="13" onclick="con(2)"style=display:none><p id="2"></p></button>
-<button class="btn success" id="14" onclick="con(3)"style=display:none><p id="3"></p></button>
-<button class="btn success" id="15" onclick="con(4)"style=display:none><p id="4"></p></button>
-<button class="btn success" id="16" onclick="con(5)"style=display:none><p id="5"></p></button>
-<button class="btn success" id="17" onclick="con(6)"style=display:none><p id="6"></p></button>
-<button class="btn success" id="18" onclick="con(7)"style=display:none><p id="7"></p></button>
-<button class="btn success" id="19" onclick="con(8)"style=display:none><p id="8"></p></button>
-<button class="btn success" id="20" onclick="con(9)"style=display:none><p id="9"></p></button>
-
-</div>
-<div class="y" style=display:none id="line" ><h4>Formed Sentence (after selecting words):</h4></br></br></div>
-<div class="z"><h5 id="result"></h5></div>
-<div class="center1">
-<button class="btn success" id="103" style=display:none onclick="re()">reform sentences</button>
-</div>
-<div class="v"><button type="button"onclick="cal()" style=display:none id="ans">Check trhe correctness of this sentence</button><br></br></div>
-
-<div class="right"><h6 style=display:none id="right">RIGHT ANSWER!!!</h6><br></br></div></br>
-<div class="wrong"><h7  style=display:none id="wrong">WRONG ANSWER!!!</h7><br></br></div>
-
-<div class="correct"><button type="Show correct answer" id ="correct" style=display:none onclick="emni3()"><p id="300"></p></button></div>
-
-<div class="part" id="400"><p></p></div>
-<div class="part1" id="401"><p></p></div>
-
-<div class="part2"  id="402"><p></p></div>
-<div class="part3" id="403"><p></p></div>
-
-<div class="part4" id="404"><p></p></div>
-<div class="part5" id="405"><p></p></div>
-
-<div class="part6" id="406"><p></p></div>
-<div class="part7" id="407"><p></p></div>
-
-
-<div class="par8" id="408"><p></p></div>
-<div class="part9" id="409"><p></p></div>
-
-<div class="part10"  id="410"><p></p></div>
-<div class="part11" id="411"><p></p></div>
-
-<div class="part12" id="412"><p></p></div>
-<div class="part13" id="413"><p></p></div>
-
-<div class="part14" id="414"><p></p></div>
-<div class="part15" id="415"><p></p></div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  $("#11").click(function(){
-    $("#11").hide(500);
-    $("#103").show();
-    $("#line").show();
-  });
-  $("#12").click(function(){
-    $("#12").hide(500);
-     $("#103").show();
-     $("#line").show();
-  });
-$("#13").click(function(){
-    $("#13").hide(500);
-    $("#103").show();
-     $("#line").show();
-  });
-$("#14").click(function(){
-    $("#14").hide(500);
-    $("#103").show();
-     $("#line").show();
-  });
-$("#15").click(function(){
-    $("#15").hide(500);
-    $("#103").show();
-    $("#line").show();
-  });
-$("#16").click(function(){
-    $("#16").hide(500);
-    $("#103").show();
-     $("#line").show();
-  });
-$("#17").click(function(){
-    $("#17").hide(500);
-    $("#103").show();
-     $("#line").show();
-  });
-$("#18").click(function(){
-    $("#18").hide(500);
-    $("#103").show();
-    $("#line").show();
-  });
-$("#19").click(function(){
-    $("#19").hide(500);
-    $("#103").show();
-    $("#line").show();
-  });
-$("#20").click(function(){
-    $("#20").hide(500);
-    $("#103").show();
-    $("#line").show();
-  });
-$("#103").click(function(){
-    $("#103").hide();
-     $("#line").hide();
-     $("#ans").hide();
-     $("#correct").hide();
-     $("#right").hide();
-     $("#wrong").hide();
-  });
-$(function btnshow(){
-    $("#b1").show();
-  });
-});
-</script>
-<script>
-
-
 var a=[]
 var ah=[]
 var af=[]
@@ -368,6 +88,69 @@ ah[42]="वहाँ है एक बड़ी सी किताब"
 ah[43]="वहाँ है बड़ी सी एक किताब"
 ah[44]="है वहाँ एक बड़ी सी किताब"
 ah[45]="है वहाँ बड़ी सी एक किताब"
+$(document).ready(function(){
+  $("#11").click(function(){
+    $("#11").hide(500);
+    $("#103").show();
+    $("#line").show();
+  });
+  $("#12").click(function(){
+    $("#12").hide(500);
+     $("#103").show();
+     $("#line").show();
+  });
+$("#13").click(function(){
+    $("#13").hide(500);
+    $("#103").show();
+     $("#line").show();
+  });
+$("#14").click(function(){
+    $("#14").hide(500);
+    $("#103").show();
+     $("#line").show();
+  });
+$("#15").click(function(){
+    $("#15").hide(500);
+    $("#103").show();
+    $("#line").show();
+  });
+$("#16").click(function(){
+    $("#16").hide(500);
+    $("#103").show();
+     $("#line").show();
+  });
+$("#17").click(function(){
+    $("#17").hide(500);
+    $("#103").show();
+     $("#line").show();
+  });
+$("#18").click(function(){
+    $("#18").hide(500);
+    $("#103").show();
+    $("#line").show();
+  });
+$("#19").click(function(){
+    $("#19").hide(500);
+    $("#103").show();
+    $("#line").show();
+  });
+$("#20").click(function(){
+    $("#20").hide(500);
+    $("#103").show();
+    $("#line").show();
+  });
+$("#103").click(function(){
+    $("#103").hide(700);
+     $("#line").hide(700);
+     $("#ans").hide(700);
+     $("#correct").hide(700);
+     $("#right").hide(700);
+     $("#wrong").hide(700);
+  });
+$(function btnshow(){
+    $("#b1").show();
+  });
+});
 function emni3() {
    if(show1==1)
 {
@@ -747,6 +530,3 @@ window.onclick = function(event) {
     }
   }
 }
-</script>
-</body>
-</html>
