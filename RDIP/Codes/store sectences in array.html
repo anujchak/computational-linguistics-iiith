@@ -169,12 +169,13 @@ div.a {
 <button class="btn success" id="17" onclick="con(6)"style=display:none><p id="6"></p></button>
 <button class="btn success" id="18" onclick="con(7)"style=display:none><p id="7"></p></button>
 <button class="btn success" id="19" onclick="con(8)"style=display:none><p id="8"></p></button>
+<button class="btn success" id="20" onclick="con(9)"style=display:none><p id="9"></p></button>
 
 </div>
 <div class="y" style=display:none id="line" ><h4>Formed Sentence (after selecting words):</h4></br></br></div>
 <div class="z"><h5 id="result"></h5></div>
 <div class="center1">
-<button class="btn success" id="20" style=display:none onclick="re()">reform sentences</button>
+<button class="btn success" id="103" style=display:none onclick="re()">reform sentences</button>
 </div>
 <div class="v"><button type="button"onclick="cal()" style=display:none id="ans">Check trhe correctness of this sentence</button><br></br></div>
 
@@ -212,52 +213,57 @@ div.a {
 <script>
 $(document).ready(function(){
   $("#11").click(function(){
-    $("#11").hide();
-    $("#20").show();
+    $("#11").hide(500);
+    $("#103").show();
     $("#line").show();
   });
   $("#12").click(function(){
-    $("#12").hide();
-     $("#20").show();
+    $("#12").hide(500);
+     $("#103").show();
      $("#line").show();
   });
 $("#13").click(function(){
-    $("#13").hide();
-    $("#20").show();
+    $("#13").hide(500);
+    $("#103").show();
      $("#line").show();
   });
 $("#14").click(function(){
-    $("#14").hide();
-    $("#20").show();
+    $("#14").hide(500);
+    $("#103").show();
      $("#line").show();
   });
 $("#15").click(function(){
-    $("#15").hide();
-    $("#20").show();
+    $("#15").hide(500);
+    $("#103").show();
     $("#line").show();
   });
 $("#16").click(function(){
-    $("#16").hide();
-    $("#20").show();
+    $("#16").hide(500);
+    $("#103").show();
      $("#line").show();
   });
 $("#17").click(function(){
-    $("#17").hide();
-    $("#20").show();
+    $("#17").hide(500);
+    $("#103").show();
      $("#line").show();
   });
 $("#18").click(function(){
-    $("#18").hide();
-    $("#20").show();
+    $("#18").hide(500);
+    $("#103").show();
     $("#line").show();
   });
 $("#19").click(function(){
-    $("#19").hide();
-    $("#20").show();
+    $("#19").hide(500);
+    $("#103").show();
     $("#line").show();
   });
 $("#20").click(function(){
-    $("#20").hide();
+    $("#20").hide(500);
+    $("#103").show();
+    $("#line").show();
+  });
+$("#103").click(function(){
+    $("#103").hide();
      $("#line").hide();
      $("#ans").hide();
      $("#correct").hide();
@@ -413,7 +419,7 @@ if(f3==10 || f3==11){
     }
 if(f3==12 || f3==15 || f3==13 || f3==14 ){
        var tem=12
-       for(var i=400;i<405;i++)
+       for(var i=400;i<403;i++)
     { var t = i
     document.getElementById(t).innerHTML =a[tem] ;
           tem=tem+1
@@ -530,7 +536,7 @@ else {
    document.getElementById("300").innerHTML ="Show answers" ;
    hide1=0
    show1=1
-   for(var i=400;i<408;i++)
+   for(var i=400;i<416;i++)
    {
           document.getElementById(i).innerHTML ="" ;
    }
@@ -545,6 +551,10 @@ var l2 = af.length
     { var t = "#"+i
     $(t).show();
     } 
+    for(var i=400;i<416;i++)
+   {
+          document.getElementById(i).innerHTML ="" ;
+   }
 }
 function shuffleArray ( array ) {
     var counter = array.length, temp, index;
@@ -577,15 +587,15 @@ a1= shuffleArray (a1)
 af=a1
 s=""
 document.getElementById("result").innerHTML =s
-for(var i=11;i<20;i++)
+for(var i=11;i<21;i++)
     { var t = "#"+i
     $(t).hide();
     }
 for(var i=11;i<l1+11;i++)
     { var t = "#"+i
-    $(t).show();
+    $(t).show(500);
     }
-$("#20").hide();
+$("#103").hide();
  $("#line").hide();
 $("#ans").hide();
 $("#correct").hide();
@@ -601,6 +611,11 @@ for(var i=0;i<l1;i++)
   document.getElementById(i).innerHTML = "XXXXXX";
   }
 }
+
+   for(var i=400;i<416;i++)
+   {
+          document.getElementById(i).innerHTML ="" ;
+   }
 }
 function emni1() {
 e=0
@@ -615,15 +630,15 @@ a1= shuffleArray (a1)
 af=a1
 s=""
 document.getElementById("result").innerHTML =s
-for(var i=11;i<20;i++)
+for(var i=11;i<21;i++)
     { var t = "#"+i
     $(t).hide();
     }
 for(var i=11;i<l1+11;i++)
     { var t = "#"+i
-    $(t).show();
+    $(t).show(500);
     }
-$("#20").hide();
+$("#103").hide();
  $("#line").hide();
 $("#ans").hide();
 $("#correct").hide();
@@ -638,6 +653,11 @@ for(var i=0;i<9;i++)
   document.getElementById(i).innerHTML = "XXXXXX";
   }
 }
+
+   for(var i=400;i<416;i++)
+   {
+          document.getElementById(i).innerHTML ="" ;
+   }
 }
 function con(x){
    var l
@@ -651,7 +671,12 @@ function con(x){
   if(l1==l2)
 {
    $("#ans").show();
-} 
+}
+
+   for(var i=400;i<416;i++)
+   {
+          document.getElementById(i).innerHTML ="" ;
+   } 
 }
 
 
@@ -669,11 +694,11 @@ for(i=0;i<=33;i++)
 }
 if(f==1)
 { 
-     $("#right").show();
+     $("#right").show(700);
 }
 else{
-   $("#wrong").show();
-  $("#correct").show();
+   $("#wrong").show(700);
+  $("#correct").show(700);
   document.getElementById("300").innerHTML ="show correct answers" ;
    show1=1
    hide1=0
@@ -691,17 +716,21 @@ for(i=0;i<=45;i++)
 if(f==1)
 { 
     
-     $("#right").show();
+     $("#right").show(700);
 }
 else{
-  $("#wrong").show();
-  $("#correct").show();
+  $("#wrong").show(700);
+  $("#correct").show(700);
 
   document.getElementById("300").innerHTML ="show correct answers" ;
   show1=1
    hide1=0
 }
 } 
+ for(var i=400;i<416;i++)
+   {
+          document.getElementById(i).innerHTML ="" ;
+   }
 }
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
