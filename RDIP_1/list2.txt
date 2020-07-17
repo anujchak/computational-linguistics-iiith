@@ -1,0 +1,5 @@
+1 - dropdown
+2 - submit button
+3 - token and type box
+4 - snow ball 
+5 - steaming
